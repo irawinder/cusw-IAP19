@@ -1,7 +1,7 @@
 /*
 For the most part, this class allows us to make mostly non overlapping "buildings"
 */
-int numBuildings = 100;
+int numBuildings = 0;
 boolean overlap;
 
 class Building{
@@ -15,14 +15,14 @@ class Building{
     center = center_in;
     id = id_in;
     others = others_in;
-    buildingWidth = random(30, 60);
-    buildingHeight = random(30, 70);
+    buildingWidth = random(minSize, minSize+20);
+    buildingHeight = random(minSize, minSize+20);
   } 
   
   void collide(){
     for (int i = id + 1; i < numBuildings; i++){
       float distance = dist(center.x, center.y, others.get(i).center.x, others.get(i).center.y);
-      float minDist = others.get(i).buildingWidth/2 + buildingWidth + 10;
+      float minDist = buildingWidth + others.get(i).buildingWidth + 5;
       float minDistH = others.get(i).buildingHeight/2 + buildingHeight + 10;
       if (distance < minDist && distance < minDistH){
         display = false;
@@ -34,7 +34,7 @@ class Building{
   void display(){
     if (!display) return;
     stroke(255);
-    fill(random(200));
+    fill(200);
     rectMode(CENTER);
     rect(center.x, center.y, buildingWidth, buildingHeight);
   }
