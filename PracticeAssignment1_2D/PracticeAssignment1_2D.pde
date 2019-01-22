@@ -1,6 +1,14 @@
 ArrayList<Building> buildings;
 HScrollbar slider;
-int minSize; 
+int minSize;
+
+/*
+This script shows a simple city drawing where 
+the building sizes change based on a slider
+
+Nina Lutz
+IAP Comp Urban Science Workshop 2019 
+*/
 
 void setup(){
   //Code here only runs once
