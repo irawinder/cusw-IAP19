@@ -60,13 +60,7 @@ void draw() {
   
   // Draw all of the buildings in our city
   for(Building b: city) {
-    
-    // Update Building Scaler via Mouse
-    float distX = mouseX - b.x;
-    float distY = mouseY - b.y;
-    float scaler = 5.0*max(1.0 - sqrt(sq(distX) + sq(distY))/(SCALE*10), 0.0);
-    b.setScaler(scaler);
-    
+    b.update();
     b.display2D();
     b.display3D();
   }

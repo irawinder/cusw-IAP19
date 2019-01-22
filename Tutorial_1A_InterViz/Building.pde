@@ -24,8 +24,11 @@ class Building {
     this.tall = tall;
   }
   
-  void setScaler(float scaler) {
-    this.scaler = scaler;
+  // Update Building Scaler for building via Mouse
+  void update() {
+    float distX = mouseX - x;
+    float distY = mouseY - y;
+    scaler = 5.0*sq(max(1.0 - sqrt(sq(distX) + sq(distY))/(base*30), 0.0));
   }
   
   // This function is called to draw our building onto the canvas
