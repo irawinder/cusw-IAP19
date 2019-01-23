@@ -9,11 +9,11 @@ void loadData(){
   
   //Small example area
   example = loadJSONObject("data/example.json");
-  features = wholeArea.getJSONArray("features");
+  features = example.getJSONArray("features");
   
   //Whole Area
   //wholeArea = loadJSONObject("data/wholeArea.json");
-  //features = example.getJSONArray("features");
+  //features = wholeArea.getJSONArray("features");
   
   println("There are : ", features.size(), " features."); 
 }
