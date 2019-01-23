@@ -17,16 +17,17 @@ void setup(){
 void draw(){
   image(background, 0, 0);
   
-  for(int i = 0; i<polygons.size(); i++){
-  
+  for(int i = 0; i<ways.size(); i++){
+    ways.get(i).draw();
   }
   
+  for(int i = 0; i<polygons.size(); i++){
+    polygons.get(i).draw();
+  }
+
   for(int i = 0; i<pois.size(); i++){
     pois.get(i).draw();
   }
   
-  for(int i = 0; i<ways.size(); i++){
-  
-  }
   
 }
