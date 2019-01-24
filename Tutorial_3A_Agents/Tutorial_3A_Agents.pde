@@ -14,6 +14,7 @@
  *    Node() - Fundamental building block of Graph()
  *    ObstacleCourse() - Contains multiple Obstacles; Allows editing, saving, and loading of configuration
  *    Obstacle() - 2D polygon that can detect overlap events
+ *    MercatorMap() - translate lat-lon to screen coordinates
  *    
  *    Standard GIS shapes:
  *    POI() - i.e. points, representing points of interest, etc
