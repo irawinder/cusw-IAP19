@@ -9,12 +9,12 @@ void loadData(){
   background.resize(width, height);
   
   //Small example area
-  example = loadJSONObject("data/example.json");
-  features = example.getJSONArray("features");
+  //example = loadJSONObject("data/example.json");
+  //features = example.getJSONArray("features");
   
   //Whole Area
-  //wholeArea = loadJSONObject("data/wholeArea.json");
-  //features = wholeArea.getJSONArray("features");
+  wholeArea = loadJSONObject("data/wholeArea.json");
+  features = wholeArea.getJSONArray("features");
   
   println("There are : ", features.size(), " features."); 
 }
