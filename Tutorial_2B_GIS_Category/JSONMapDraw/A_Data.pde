@@ -38,7 +38,6 @@ void parseData(){
     String name = tags.getString("name");
     if (name == null) name = " "; 
     
-    
     //Make POIs if it's a point
     if(type.equals("Point")){
       //create new POI
