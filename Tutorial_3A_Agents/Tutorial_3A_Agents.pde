@@ -69,7 +69,7 @@ void setup() {
   //poiPaths();
   
   /* Step 3: Initialize Paths Using ONLY ONE of these methods */
-  //initPopulation(1000);
+  initPopulation(1000);
   //initPopulation(500);
   
 }
