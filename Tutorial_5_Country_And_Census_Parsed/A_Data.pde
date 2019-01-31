@@ -5,6 +5,7 @@ Table CensusBlocks;
 
 void loadData(){
   CountyBoundary = loadTable("data/FloridaNodes.csv", "header");
+  //CensusData = loadTable("
 }
 
 void parseData(){
@@ -17,4 +18,6 @@ void parseData(){
     }
      county = new Polygon(coords);
 
+  //Test case for point in Polygon
+  //println(county.pointInPolygon(new PVector(27.25, -80.85)));
 }
