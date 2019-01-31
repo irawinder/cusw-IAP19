@@ -8,5 +8,13 @@ void loadData(){
 }
 
 void parseData(){
+  //First parse county polygon
+    ArrayList<PVector> coords = new ArrayList<PVector>();
+    for(int i = 0; i<CountyBoundary.getRowCount(); i++){
+         float lat = float(CountyBoundary.getString(i, 2));
+         float lon = float(CountyBoundary.getString(i, 1));
+         coords.add(new PVector(lat, lon));
+    }
+     county = new Polygon(coords);
 
 }

@@ -1,16 +1,14 @@
 MercatorMap map;
 
 void setup(){
-  size(600, 700);
+  size(600, 800);
   //Intiailize your data structures early in setup 
-  map = new MercatorMap(width, height, 29, 26, -83, -76, 0);
+  map = new MercatorMap(width, height, 28, 26, -81.5, -80, 0);
   loadData();
   parseData();
 }
 
 void draw(){
   background(0);
-  for(int i =0; i<polygons.size(); i++){
-    polygons.get(i).draw();
-  }
+  county.draw();
 }
