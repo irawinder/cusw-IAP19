@@ -4,7 +4,7 @@ void setup(){
   CensusPolygons = new ArrayList<Polygon>();
   size(600, 800);
   //Intiailize your data structures early in setup 
-  map = new MercatorMap(width, height, 29, 25, -82.5, -80, 0);
+  map = new MercatorMap(width, height, 29, 26, -81.5, -80, 0);
   loadData();
   parseData();
 }
