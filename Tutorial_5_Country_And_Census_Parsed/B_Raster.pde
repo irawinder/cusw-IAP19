@@ -42,6 +42,7 @@ class Raster{
           Polygon p = polys.get(k);
           PVector l = centers[i][j];
           if(p.pointInPolygon(map.getGeo(l))){
+            //println(p.score);
             scores[i][j] = p.score;
           }
         }

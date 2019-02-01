@@ -20,7 +20,6 @@ class Polygon{
     coordinates = coords;
     fill = color(0, 255, 255);
     makeShape();
-    score = random(0, 255);
   }
   
   Polygon(ArrayList<PVector> coords, color c){

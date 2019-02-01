@@ -45,6 +45,11 @@ void parseData(){
   
   //Add attribute you want to your polygon (you can add more attributes if you want and look at the Tiger page for more info) 
   for(int i = 0; i<CensusPolygons.size(); i++){
+    for(int j = 0; j<CensusData.getRowCount(); j++){
+      //Household income = B19113
+      //Currently there appears to be a slight bug in some of the data because it is still cached from the shutdown, and is converting odds in QGIS 
+      CensusPolygons.get(i).score = CensusData.getFloat(i, "B19113");
+    }
   }
 
   //Test case for point in Polygon
