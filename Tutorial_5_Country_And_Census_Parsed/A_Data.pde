@@ -6,7 +6,7 @@ Table CensusBlocks;
 void loadData(){
   CountyBoundary = loadTable("data/FloridaNodes.csv", "header");
   CensusBlocks = loadTable("data/CensusNodes.csv", "header");
- // CensusData = loadTable("data/CensusAttributes.csv", "header");
+  CensusData = loadTable("data/CensusAttrs.csv", "header");
   println("Data Loaded");
 }
 
@@ -25,14 +25,15 @@ void parseData(){
   for(int i = 0; i<CensusBlocks.getRowCount(); i++){
     int shapeid = int(CensusBlocks.getString(i, 0));
        if(shapeid != previd){
-         if(coords.size() > 0){
-           Polygon poly = new Polygon(coords);
-           CensusPolygons.add(poly);
-         }
-         //clear coords
-         coords = new ArrayList<PVector>();
-         //reset variable
-         previd = shapeid;
+           if(coords.size() > 0){
+               Polygon poly = new Polygon(coords);
+               poly.id = shapeid;
+               CensusPolygons.add(poly);
+           }
+           //clear coords
+           coords = new ArrayList<PVector>();
+           //reset variable
+           previd = shapeid;
        }
        if(shapeid == previd){
          float lat = float(CensusBlocks.getString(i, 2));
@@ -40,6 +41,10 @@ void parseData(){
          //println(lat, lon);
          coords.add(new PVector(lat, lon));
        }
+  }
+  
+  //Add attribute you want to your polygon (you can add more attributes if you want and look at the Tiger page for more info) 
+  for(int i = 0; i<CensusPolygons.size(); i++){
   }
 
   //Test case for point in Polygon

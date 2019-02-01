@@ -6,6 +6,9 @@ class Polygon{
   PShape p;
   ArrayList<PVector>coordinates;
   color fill;
+  float pop;
+  int id; 
+  float score;
 
   //Empty constructor
   Polygon(){
@@ -17,6 +20,7 @@ class Polygon{
     coordinates = coords;
     fill = color(0, 255, 255);
     makeShape();
+    score = random(0, 255);
   }
   
   Polygon(ArrayList<PVector> coords, color c){
