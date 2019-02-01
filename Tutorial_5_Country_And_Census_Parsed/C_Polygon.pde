@@ -1,5 +1,6 @@
 ArrayList<Polygon> CensusPolygons;
 Polygon county;
+
 class Polygon{
   //Shape, coordinates, and color variables
   PShape p;
@@ -17,6 +18,13 @@ class Polygon{
     fill = color(0, 255, 255);
     makeShape();
   }
+  
+  Polygon(ArrayList<PVector> coords, color c){
+    coordinates = coords;
+    fill = c;
+    makeShape();
+  }
+  
   
   //Making the shape to draw
   void makeShape(){
